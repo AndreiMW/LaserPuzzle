@@ -8,4 +8,5 @@
 public static class Tags {
 	public const string MIRROR = "Mirror";
 	public const string FILTER = "Filter";
+	public const string LEVEL_END = "LevelEnd";
 }
