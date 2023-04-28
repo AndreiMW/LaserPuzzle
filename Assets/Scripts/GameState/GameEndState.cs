@@ -6,12 +6,14 @@
  */
 
 using GameState;
+using Managers;
 using UnityEngine;
 
 public class GameEndState : BaseGameState {
 	/// <inheritdoc />
 	public override void OnStateEnter(GameManager manager) {
-		LaserManager.Instance.ChangeCanShootLaser(false);
+		LevelManager.Instance.ChangeLasersState(false);
+		LevelManager.Instance.LevelEnd();
 	}
 
 	/// <inheritdoc />

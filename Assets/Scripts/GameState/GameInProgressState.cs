@@ -5,13 +5,14 @@
  * Copyright (c) 2023 Avangarde Software. All rights reserved. 
  */
 
+using Managers;
 using UnityEngine;
 
 namespace GameState {
 	public class GameInProgressState : BaseGameState {
 		/// <inheritdoc />
 		public override void OnStateEnter(GameManager manager) {
-			LaserManager.Instance.ChangeCanShootLaser(true);
+			LevelManager.Instance.ChangeLasersState(true);
 		}
 		
 		/// <inheritdoc />
@@ -20,6 +21,9 @@ namespace GameState {
 		
 		/// <inheritdoc />
 		public override void OnUpdate(GameManager manager) {
+			if (Input.GetKeyDown(KeyCode.Space)) {
+				manager.ChangeState(manager.GameEnd);
+			}
 		}
 	}
 }

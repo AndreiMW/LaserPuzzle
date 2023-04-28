@@ -6,12 +6,13 @@
  */
 
 using GameState;
+using Managers;
 using UnityEngine;
 
 public class GameIdleState : BaseGameState {
 	/// <inheritdoc />
 	public override void OnStateEnter(GameManager manager) {
-		LaserManager.Instance.ResetLasers();
+		LevelManager.Instance.LoadLevel();	
 	}
 
 	/// <inheritdoc />
