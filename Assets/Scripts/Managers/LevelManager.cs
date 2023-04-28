@@ -66,6 +66,14 @@ namespace Managers {
 		public void ChangeLasersState(bool shouldShoot) {
 			this._currentLevelInstance.LaserManager.ChangeCanShootLaser(shouldShoot);
 		}
+
+		/// <summary>
+		/// Change mirrors interaction state.
+		/// </summary>
+		/// <param name="state">Interaction (drag) enabled/disabled.</param>
+		public void ChangeMirrorInteractionState(bool state) {
+			this._currentLevelInstance.MirrorManager.ChangeMirrorsInteractionState(state);
+		}
 		
 		/// <summary>
 		/// Trigger level end.
