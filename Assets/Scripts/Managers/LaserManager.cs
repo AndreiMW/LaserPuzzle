@@ -10,8 +10,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserManager : MonoBehaviour {
-	private static LaserManager s_instance; 
-	public static LaserManager Instance => s_instance ??= FindObjectOfType<LaserManager>();
 
 	[SerializeField]
 	private LaserOrigin _laserOrigin;
@@ -23,7 +21,7 @@ public class LaserManager : MonoBehaviour {
 
 	private int _maxLaserDistance = 100;
 
-	private bool _shootLasers = false;
+	private bool _shootLasers;
 
 	#region Lifecycle
 	
@@ -41,10 +39,6 @@ public class LaserManager : MonoBehaviour {
 		}
 	}
 
-	private void OnDestroy() {
-		s_instance = null;
-	}
-	
 	#endregion
 	
 	#region Public
@@ -129,7 +123,7 @@ public class LaserManager : MonoBehaviour {
 		if (index < this._visibleLines.Count) {
 			lineRenderer = this._visibleLines[index];
 		} else {
-			lineRenderer = GameObject.Instantiate(this._linePrefab);
+			lineRenderer = GameObject.Instantiate(this._linePrefab,this.transform);
 			this._visibleLines.Add(lineRenderer);
 		}
 
