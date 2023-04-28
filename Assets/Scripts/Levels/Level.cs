@@ -5,6 +5,7 @@
  * Copyright (c) 2023 Avangarde Software. All rights reserved. 
  */
 
+using Managers;
 using UnityEngine;
 
 namespace Levels {
@@ -14,6 +15,9 @@ namespace Levels {
 		
 		[field:SerializeField]
 		public LaserManager LaserManager { get; private set; }
+		
+		[field:SerializeField]
+		public MirrorManager MirrorManager { get; private set; }
 
 		#region Public
 		
