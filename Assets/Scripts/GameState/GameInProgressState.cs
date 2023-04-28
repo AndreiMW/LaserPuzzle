@@ -13,6 +13,7 @@ namespace GameState {
 		/// <inheritdoc />
 		public override void OnStateEnter(GameManager manager) {
 			LevelManager.Instance.ChangeLasersState(true);
+			LevelManager.Instance.ChangeMirrorInteractionState(true);
 		}
 		
 		/// <inheritdoc />

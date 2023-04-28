@@ -13,6 +13,7 @@ public class GameEndState : BaseGameState {
 	/// <inheritdoc />
 	public override void OnStateEnter(GameManager manager) {
 		LevelManager.Instance.ChangeLasersState(false);
+		LevelManager.Instance.ChangeMirrorInteractionState(false);
 		LevelManager.Instance.LevelEnd();
 	}
 
