@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 		this._currentState = this.GameIdle;
+		
+	}
+
+	private void Start() {
 		this._currentState.OnStateEnter(this);
 	}
 
