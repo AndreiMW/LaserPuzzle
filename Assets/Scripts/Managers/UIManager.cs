@@ -5,27 +5,41 @@
  * Copyright (c) 2023 Avangarde Software. All rights reserved. 
  */
 
+using System;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Managers {
 	public class UIManager : MonoBehaviour {
+		private static UIManager s_instance;
+		public static UIManager Instance => s_instance ??= FindObjectOfType<UIManager>();
+		
 		[SerializeField]
-		private Button _startButton;
+		private StartView _startView;
 
 		#region Lifecycle
 
-		private void Awake() {
-			this._startButton.onClick.AddListener(this.HandleStartButton);
+		private void OnDestroy() {
+			s_instance = null;
 		}
 
 		#endregion
 		
-		#region Private
+		#region Public
 
-		private void HandleStartButton() {
-			GameManager.Instance.ChangeState(GameManager.Instance.GameInProgress);
-			this.gameObject.SetActive(false);
+		/// <summary>
+		/// Show the start view.
+		/// </summary>
+		public void ShowStartView() {
+			this._startView.Show();
+		}
+		
+		/// <summary>
+		/// Hide the start view.
+		/// </summary>
+		public void HideStartView() {
+			this._startView.Hide();
 		}
 
 		#endregion
