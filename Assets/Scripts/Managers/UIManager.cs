@@ -17,6 +17,9 @@ namespace Managers {
 		
 		[SerializeField]
 		private StartView _startView;
+		
+		[SerializeField]
+		private GameEndView _gameEndView;
 
 		#region Lifecycle
 
@@ -40,6 +43,20 @@ namespace Managers {
 		/// </summary>
 		public void HideStartView() {
 			this._startView.Hide();
+		}
+		
+		/// <summary>
+		/// Show the game end view.
+		/// </summary>
+		public void ShowGameEndView() {
+			this._gameEndView.Show();
+		}
+		
+		/// <summary>
+		/// Hide the game end view.
+		/// </summary>
+		public void HideGameEndView() {
+			this._gameEndView.Hide();
 		}
 
 		#endregion
