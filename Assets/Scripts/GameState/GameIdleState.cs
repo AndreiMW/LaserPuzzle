@@ -13,6 +13,7 @@ public class GameIdleState : BaseGameState {
 	/// <inheritdoc />
 	public override void OnStateEnter(GameManager manager) {
 		LevelManager.Instance.LoadLevel();	
+		UIManager.Instance.ShowStartView();
 	}
 
 	/// <inheritdoc />
