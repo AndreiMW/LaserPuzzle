@@ -15,6 +15,8 @@ public class GameEndState : BaseGameState {
 		LevelManager.Instance.ChangeLasersState(false);
 		LevelManager.Instance.ChangeMirrorInteractionState(false);
 		LevelManager.Instance.LevelEnd();
+		
+		UIManager.Instance.ShowGameEndView();
 	}
 
 	/// <inheritdoc />
