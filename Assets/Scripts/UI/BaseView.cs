@@ -17,6 +17,14 @@ namespace UI {
 		private CanvasGroup _canvasGroupReference;
 		private CanvasGroup _canvasGroup => this._canvasGroupReference ??= this.GetComponent<CanvasGroup>();
 
+		public bool IsInteractable {
+			get => this._canvasGroup.interactable;
+			set {
+				this._canvasGroup.interactable = value;
+				this._canvasGroup.blocksRaycasts = value;
+			}
+		}
+
 		#region Public
 		
 		/// <summary>
@@ -28,6 +36,7 @@ namespace UI {
 			this._canvasGroup.DOFade(1f, duration).OnComplete(Completion);
 
 			void Completion() {
+				this.IsInteractable = true;
 				completionCallback?.Invoke();
 			}
 		}
@@ -41,6 +50,7 @@ namespace UI {
 			this._canvasGroup.DOFade(0f, duration).OnComplete(Completion);
 
 			void Completion() {
+				this.IsInteractable = false;
 				completionCallback?.Invoke();
 			}
 		}
