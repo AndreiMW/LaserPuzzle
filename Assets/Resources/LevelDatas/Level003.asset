@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43cca488a53d45d6a82898e947daec72, type: 3}
+  m_Name: Level003
+  m_EditorClassIdentifier: 
+  <LevelPrefab>k__BackingField: {fileID: 648076735484402453, guid: 669193b7b6e403c4ebc7fb8961beba69, type: 3}
+  <EndLevelColor>k__BackingField: {r: 0.2509804, g: 0.7529412, b: 1, a: 1}
