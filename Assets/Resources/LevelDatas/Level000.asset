@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Level000
   m_EditorClassIdentifier: 
   <LevelPrefab>k__BackingField: {fileID: 8230202826367162208, guid: 4255f3512d794ad45a3d694dba938acc, type: 3}
-  <EndLevelColor>k__BackingField: {r: 1, g: 0, b: 0, a: 1}
+  <EndLevelColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
