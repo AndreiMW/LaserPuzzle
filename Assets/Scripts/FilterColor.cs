@@ -29,8 +29,8 @@ public class FilterColor : MonoBehaviour {
 	private void Awake() {
 		this._renderer = this.GetComponent<Renderer>();
 
-		this._renderer.material.color = this.ColorOfFilter;
 		this.ColorOfFilter = this.ColorFromEnum();
+		this._renderer.material.color = this.ColorOfFilter;
 	}
 	
 	#endregion
