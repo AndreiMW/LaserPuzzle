@@ -10,5 +10,5 @@ using UnityEngine;
 public struct LaserInfo {
 	public Vector3 StartPosition { get; internal set; }
 	public Vector3 Direction { get; internal set; }
-	public Color Color { get; internal set; }
+	public Color32 Color { get; internal set; }
 }
