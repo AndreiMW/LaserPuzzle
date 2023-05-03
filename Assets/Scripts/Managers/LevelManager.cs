@@ -16,6 +16,8 @@ namespace Managers {
 		private static LevelManager s_instance;
 		public static LevelManager Instance => s_instance ??= FindObjectOfType<LevelManager>();
 
+		public Color LevelEndColor => this._currentLevelData.EndLevelColor;
+
 		private LevelData[] _levelDatas;
 		
 		public event Action OnLevelLoaded;
