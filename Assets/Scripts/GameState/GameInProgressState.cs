@@ -17,14 +17,9 @@ namespace GameState {
 		}
 		
 		/// <inheritdoc />
-		public override void OnStateExit(GameManager manager) {
-		}
+		public override void OnStateExit(GameManager manager) { }
 		
 		/// <inheritdoc />
-		public override void OnUpdate(GameManager manager) {
-			if (Input.GetKeyDown(KeyCode.Space)) {
-				manager.ChangeState(manager.GameEnd);
-			}
-		}
+		public override void OnUpdate(GameManager manager) { }
 	}
 }

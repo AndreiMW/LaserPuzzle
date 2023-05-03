@@ -22,9 +22,5 @@ public class GameIdleState : BaseGameState {
 
 	/// <inheritdoc />
 	public override void OnUpdate(GameManager manager) {
-		Debug.Log("Idle Update");
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			manager.ChangeState(manager.GameInProgress);
-		}
 	}
 }
