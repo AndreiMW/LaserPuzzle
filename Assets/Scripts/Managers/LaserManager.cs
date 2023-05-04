@@ -105,7 +105,7 @@ namespace Managers {
 							filterColor = this.CmykToRgb(combination);
 						}
 
-						nextInfo.StartPosition = hitPos + (info.Direction * 0.75f);
+						nextInfo.StartPosition = hitPos + (info.Direction * 0.5f);
 						nextInfo.Color = filterColor;
 						nextInfo.Direction = info.Direction;
 
