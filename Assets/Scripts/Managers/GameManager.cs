@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 		this._currentState = this.GameIdle;
-		
+		Screen.SetResolution(1920,1080,true);
 	}
 
 	private void Start() {
