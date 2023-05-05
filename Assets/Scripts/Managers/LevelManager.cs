@@ -25,7 +25,8 @@ namespace Managers {
 
 		private LevelData _currentLevelData;
 		private Level _currentLevelInstance;
-		
+
+		public int CurrentLevelIndex => this._currentLevelIndex;
 		private int _currentLevelIndex;
 		private int _actualLevelIndex;
 		
