@@ -14,6 +14,7 @@ public class GameIdleState : BaseGameState {
 	public override void OnStateEnter(GameManager manager) {
 		LevelManager.Instance.LoadLevel();	
 		UIManager.Instance.ShowStartView();
+		UIManager.Instance.ShowCurrentLevelText();
 	}
 
 	/// <inheritdoc />

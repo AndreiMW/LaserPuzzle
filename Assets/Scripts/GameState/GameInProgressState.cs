@@ -14,6 +14,7 @@ namespace GameState {
 		public override void OnStateEnter(GameManager manager) {
 			LevelManager.Instance.ChangeLasersState(true);
 			LevelManager.Instance.ChangeMirrorInteractionState(true);
+			UIManager.Instance.HideCurrentLevelText();
 		}
 		
 		/// <inheritdoc />
