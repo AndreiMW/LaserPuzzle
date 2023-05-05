@@ -5,10 +5,10 @@
  * Copyright (c) 2023 Avangarde Software. All rights reserved. 
  */
 
-using System;
-using UI;
 using UnityEngine;
-using UnityEngine.UI;
+
+using UI;
+using UI.CurrentLevelMVP;
 
 namespace Managers {
 	public class UIManager : MonoBehaviour {
@@ -21,7 +21,17 @@ namespace Managers {
 		[SerializeField]
 		private GameEndView _gameEndView;
 
+		[SerializeField]
+		private CurrentLevelView _currentLevelView;
+		private CurrentLevelPresenter _currentLevelPresenter;
+		private CurrentLevelModel _currentLevelModel;
+
 		#region Lifecycle
+
+		private void Awake() {
+			this._currentLevelModel = new CurrentLevelModel();
+			this._currentLevelPresenter = new CurrentLevelPresenter(this._currentLevelModel, this._currentLevelView);
+		}
 
 		private void OnDestroy() {
 			s_instance = null;
@@ -58,6 +68,24 @@ namespace Managers {
 		public void HideGameEndView() {
 			this._gameEndView.Hide();
 		}
+
+		/// <summary>
+		/// Show the current level view.
+		/// </summary>
+		public void ShowCurrentLevelText() {
+			this._currentLevelPresenter.UpdateLevelText();
+			
+			this._currentLevelView.Show();
+		}
+
+		/// <summary>
+		/// Hide the current level view.
+		/// </summary>
+		public void HideCurrentLevelText() {
+			this._currentLevelView.Hide();
+		}
+		
+		
 
 		#endregion
 	}
