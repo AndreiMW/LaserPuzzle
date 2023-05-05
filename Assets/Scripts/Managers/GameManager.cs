@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour {
 
 	private void Update() {
 		this._currentState.OnUpdate(this);
+		
+		if (Input.GetKey(KeyCode.Escape)) {
+			Application.Quit();
+		}
 	}
 	
 	#endregion
