@@ -15,6 +15,6 @@ namespace Levels {
 		public Level LevelPrefab {get; private set;} 
 		
 		[field:SerializeField]
-		public Color EndLevelColor { get; private set; }
+		public Color32 EndLevelColor { get; private set; }
 	}
 }
